@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    color: aliceblue;
+    backdrop-filter: brightness(.5);
+    letter-spacing: 4px;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    font-size: 25px;
+    border: 5px solid white;
+    cursor: pointer;
+    transition: 1s background-color;
+    white-space: nowrap;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.split {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    background-color: pink;
+    background-image: url("https://www.reuters.com/resizer/v2/YSXJOQLVH5LETJAV2OZHT4N2TA.jpg?auth=65a92e61f90fd91dcc897f3d3caf0f21e9cb9eda3d3cedb31799851ecd6283e7&width=1080&quality=80");
+    background-size: cover;
+   
+}
+
+.split.right{
+    position: absolute;
+    right: 0;
+    background-color: lightblue;
+    background-image: url("https://m.media-amazon.com/images/I/31W9+sE8McL._SY300_SX300_.jpg");
+    background-size: cover;
+    
+}
+
+.active-left .left {
+    width: 70%;
+}
+
+.active-left .right {
+    width: 30%;
+}
+
+.active-right .right {
+    width: 70%;
+}
+
+.active-right .left {
+    width: 30%;
+}
+
+.left,.right {
+    transition: width 2s ease-in-out;
+}
